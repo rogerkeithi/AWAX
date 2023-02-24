@@ -1,4 +1,18 @@
+/*----------------------------------------
+ Configurações Gerais
+ ----------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+:root{
+    --corfont: #fff;
+    --decapri: #b28756;
+    --menusele: #dcdcdc;
+    --bgDeLight: #f7f7f7;
+    --titColorLight: #000;
+    --bgDeDark: #000;
+    --titColorDark: #fff;
+    --descColor: grey;
+}
 
 body{
     width: 100%;
@@ -13,8 +27,7 @@ header{
 }
 main{
     width:100%;
-    height: 1200px;
-    background-color: #ccc;
+    background-color: #131313;
     display:block;
 }
 footer{
@@ -32,7 +45,6 @@ footer{
 }
 #main{
     width:100%;
-    height: 1200px;
     background-color: #ccc;
     display:block;
 }
@@ -48,6 +60,78 @@ footer{
     float: left;
     margin-top:0.6vw;
 }
+.button{
+    display: inline-block;
+    background-color: var(--decapri);
+    color: var(--corfont);
+    text-transform: uppercase;
+    font-size: 0.6vw;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.9vw 2vw;
+    margin-top: 1vw;
+    border-radius: 2vw;
+}
+
+/*----------------------------------------
+    Template sections
+----------------------------------------*/
+
+.default{
+    width: 99vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+.default .section-title,
+.default .section-desc{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1vw;
+}
+.default .section-title{
+    font-size: 1.5vw;
+}
+.default .section-desc{
+    font-size: 0.7vw;
+    text-align: center;
+    color: var(--descColor);
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+}
+.default .section-body{
+    font-size: 1vw;
+    text-align: center;
+    margin:auto;
+    max-width: 65vw;
+    min-height: 5vw;
+    padding: 0.5vw;
+}
+
+/*Dark and Light mode*/
+.default.Light{
+    background-color: var(--bgDeLight);
+}
+.default.Light .section-title{
+    color: var(--titColorLight);
+}
+.default.Light .section-desc{
+    color: var(--descColor);
+}
+.default.Dark{
+    background-color: var(--bgDeDark);
+}
+.default.Dark .section-title{
+    color: var(--titColorDark);
+}
+.default.Dark .section-desc{
+    color: var(--descColor);
+}
+
+/*----------------------------------------
+    Navbar
+----------------------------------------*/
+
 .navbar-list{
     list-style-type: none;
     margin: 0;
@@ -63,7 +147,7 @@ footer{
 .navbar-list li:hover {
     text-decoration: none;
     color:#ccc ;
-    border-bottom: 0.4vw solid #b28756;
+    border-bottom: 0.4vw solid var(--decapri);
   }
 .navbar-list li {
     float:left;
@@ -75,5 +159,98 @@ footer{
     height: 2.9vw;
 }
 .active{
-    border-bottom: 0.4vw solid #b28756;
+    border-bottom: 0.4vw solid var(--decapri);
+}
+
+/*----------------------------------------
+    Banner
+----------------------------------------*/
+
+.banner{
+    height: calc(100vh - 100px);
+    background-color: #131313;
+    background-image: url("/assets/img/media/complementos/bg.jpg");
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden;
+} 
+.banner .sliders{
+    width: 1000vw;
+    height: 100%;
+}
+.banner .slider{
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0,0,0,0.6);
+}
+.banner .sliderarea{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: var(--corfont);
+}
+.banner h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3vw;
+}
+.banner span{
+    color: var(--decapri);
+    font-size: 3.3vw;
+}
+.banner h2{
+    text-transform: uppercase;
+    margin-top: 0.2vw;
+    font-size: 1.5vw;
+}
+
+/*Pointers do slider*/
+.banner .sliders-pointers{
+    width: 99vw;
+    height: 20px;
+    position: absolute;
+    margin-top: -5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .pointer {
+    width: 0.9vh;
+    height: 1vh;
+    border: 0.2vh solid var(--decapri);
+    border-radius: 50%;
+    margin: 0vh 0.5vh;
+    cursor: pointer;
+}
+.banner .pointer.active{
+    background-color: var(--decapri);
+}
+
+/*----------------------------------------
+    About Us
+----------------------------------------*/
+
+.section-aboutus{
+    display: flex;
+}
+.section-aboutus-left{
+    flex: 1;
+}
+.section-aboutus-left p{
+    font-size: 0.9vw;
+    line-height: 1.5vw;
+    text-align: left;
+    margin-top: 0;
+    margin-right: 1vw;
+}
+.section-aboutus-left .button{
+    float: left;
+
+}
+.section-aboutus-right img{
+    width: 20vw;
+    box-shadow: 0.5vw 0.5vw 0.5vw #aaa9a9;
 }
