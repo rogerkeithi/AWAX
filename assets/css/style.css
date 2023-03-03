@@ -12,6 +12,15 @@
     --bgDeDark: #000;
     --titColorDark: #fff;
     --descColor: grey;
+    --borderRightColor: #333;
+    --decoPrinc: #b28756;
+    --bgColor: #000;
+    --fgColor: #fff;
+    --destaMenu: #ccc;
+    --textService:#999;
+    --bgFiltroProj:#ebebeb;
+    --fgFiltroProj:#5f5f5f;
+    --linFiltroProj:#d3d3d3;
 }
 
 body{
@@ -167,12 +176,13 @@ footer{
 ----------------------------------------*/
 
 .banner{
-    height: calc(100vh - 100px);
+    height: calc(100vh - 5vw);
     background-color: #131313;
     background-image: url("/assets/img/media/complementos/bg.jpg");
     background-size: cover;
     background-position: bottom;
     overflow: hidden;
+    background-position: 50% 50%;
 } 
 .banner .sliders{
     width: 1000vw;
@@ -210,15 +220,14 @@ footer{
 /*Pointers do slider*/
 .banner .sliders-pointers{
     width: 99vw;
-    height: 20px;
-    position: absolute;
-    margin-top: -5vw;
+    height: 0.6vw;
+    margin-top: -2vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .banner .pointer {
-    width: 0.9vh;
+    width: 1vh;
     height: 1vh;
     border: 0.2vh solid var(--decapri);
     border-radius: 50%;
@@ -253,4 +262,69 @@ footer{
 .section-aboutus-right img{
     width: 20vw;
     box-shadow: 0.5vw 0.5vw 0.5vw #aaa9a9;
+}
+
+/*----------------------------------------
+    Section Services
+----------------------------------------*/
+
+.section-services{
+    display: flex;
+    color: var(--bgDeLight);
+}
+.section-service{
+    text-align: center;
+    flex: 1;
+    padding: 1vw;
+    border-right: 0.1vw solid var(--borderRightColor);
+}
+.section-service:first-child{
+    border-left: 0.1vw solid var(--borderRightColor);
+}
+.section-service h4{
+    font-size: 0.8vw;
+}
+.section-service p{
+    font-size: 0.8vw;
+}
+.section-service img{
+    width: 3vw;
+}
+
+/*----------------------------------------
+    Section Projetos
+----------------------------------------*/
+.section-projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-projects--filters{
+    background-color: var(--bgFiltroProj);
+    width: 55vw;
+    border-radius: 5vw;
+    border: 0.1vw solid var(--destaMenu);
+}
+
+.section-projects--filters ul{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    height: 2.85vw;
+}
+
+.section-projects--filters li{
+    float:left;
+    color:var(--textService);
+    text-align: center;
+    width: 9vw;
+    font-size: 0.8vw;
+    height: 2.2vw;
+    font-size: 1vw;
+    padding-top: 1vw;
+    border-right: 0.1vw solid var(--destaMenu);
+}
+.section-projects--filters .lastLiFilter{
+    border-right: 0;
 }
