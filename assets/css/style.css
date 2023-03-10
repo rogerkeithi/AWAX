@@ -172,13 +172,13 @@ footer{
 }
 
 /*----------------------------------------
-    Banner
+    Banners
 ----------------------------------------*/
 
 .banner{
     height: calc(100vh - 5vw);
     background-color: #131313;
-    background-image: url("/assets/img/media/complementos/bg.jpg");
+    background-image: url("/assets/image/bg.jpg");
     background-size: cover;
     background-position: bottom;
     overflow: hidden;
@@ -298,11 +298,12 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 1vw;
 }
 .section-projects--filters{
     background-color: var(--bgFiltroProj);
-    width: 55vw;
-    border-radius: 5vw;
+    width: 38.2vw;
+    border-radius: 2vw;
     border: 0.1vw solid var(--destaMenu);
 }
 
@@ -318,13 +319,198 @@ footer{
     float:left;
     color:var(--textService);
     text-align: center;
-    width: 9vw;
-    font-size: 0.8vw;
+    width:6vw;
     height: 2.2vw;
-    font-size: 1vw;
+    font-size: 0.7vw;
     padding-top: 1vw;
     border-right: 0.1vw solid var(--destaMenu);
 }
 .section-projects--filters .lastLiFilter{
     border-right: 0;
+}
+.filters-list li:hover {
+    text-decoration: none;
+    color:#ccc ;
+    border-bottom: 0.4vw solid var(--decapri);
+    box-sizing: border-box;
+    padding-bottom: 1.7vw;
+  }
+.filter-active{
+    border-bottom: 0.4vw solid var(--decapri);
+    box-sizing: border-box;
+    padding-bottom: 1.7vw;
+}
+.section-projects--photos {
+    width: 100vw;
+    max-width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-projects--photo {
+    width: 250px;
+    margin-right: 20px;
+}
+
+.section-projects--photoarea {
+    margin: 20px;
+    width: 260px;
+    height: 160px;
+}
+
+.section-projects--photoarea img {
+    width: inherit;
+    height: inherit;
+}
+
+.section-projects--photoinfo {
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    width: inherit;
+    height: inherit;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: var(--destaMenu);
+    flex-direction: column;
+}
+
+.section-projects--photoinfo h5 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.section-projects--photoinfo p {
+    font-size: 13px;
+    padding: 10px 40px;
+    line-height: 23px;
+    text-align: center;
+}
+
+.section-projects--photoarea:hover .section-projects--photoinfo{
+    display: flex;
+    cursor: pointer;
+}
+
+/*----------------------------------------
+    Section Our Team
+----------------------------------------*/
+
+.ourteam{
+    height: calc(100vh - 15vw);
+    background-image: url("https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80");
+}
+.ourteam .sliders{
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    height: calc(100vh - 23vw);
+}
+.ourteam .default.Light .section-title{
+    color: #fff;
+}
+.ourteam .default.Light .section-desc{
+    color: var(--textService);
+}
+.ourteam .default.Light{
+    background-color: rgba(0,0,0,0.8);
+    height: 3vw;
+}
+.our-team-cards{
+    width: 60vw;
+    display: flex;
+    height: 10vw;
+    margin-left: 20vw;
+    align-items: center;
+}
+.team-mate-card{
+    background-color: var(--titColorDark);
+    width: 17vw;
+    height: 20vw;
+    margin: auto;
+    text-align: center;
+    padding-top: 1.5vw;
+}
+.team-mate-card .team-mate-pic img{
+    width: 10vw;
+}
+.team-mate-card .team-mate-infos h4{
+    font-size: 2vh;
+}
+.team-mate-card .team-mate-infos h6{
+    margin-top:  -0.9vw;
+    font-size: 1vh;
+}
+.team-mate-socialmedias ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+.team-mate-socialmedias li{
+    float:left;
+    text-align: center;
+    width: 1.9vw;
+    font-size: 0.8vw;
+    padding-top: 0.5vw;
+    height: 1.4vw;
+    background-color: var(--destaMenu);
+    border-radius: 50%;
+    margin-left: 0.2vw;
+}
+.team-mate-socialmedias img{
+    width: 0.9vw;
+}
+.team-pointers{
+    position: absolute;
+}
+.team-mate-socialmedias .active-iconmedia{
+    background-color: var(--decapri);
+}
+
+/*----------------------------------------
+    Section Happy Clients
+----------------------------------------*/
+
+.happyclients{
+    background-color: white;
+    background-image: none;
+}
+.happyclients .sliders {
+    background-color:rgba(0,0,0,0);
+}
+.happyclients .default.Light{
+    background-color: rgba(0,0,0,0);
+}
+.happyclients .default.Light .section-title{
+    background-color: rgba(0,0,0,0);
+    color: var(--titColorLight);
+}
+.desc-client{
+    width: 50vw;
+}
+.desc-client p{
+    color: var(--textService);
+    font-size: 0.8vw;
+}
+.desc-client img{
+    width: 1.5vw;
+}
+.happyclient-card{
+    background-color: var(--titColorDark);
+    width: 50vw;
+    height: 20vw;
+    margin: auto;
+    text-align: center;
+    padding-top: 1.5vw;
+}
+.happyclient-card .client-pic img{
+    width: 10vw;
+}
+.happyclient-card .client-infos h4{
+    font-size: 2vh;
+}
+.happyclient-card .client-infos h6{
+    margin-top:  -0.9vw;
+    font-size: 1vh;
 }
